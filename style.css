@@ -1,0 +1,66 @@
+/* Configuração Geral */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9ecef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h2 { margin-top: 0; color: #333; }
+
+.form-group { margin-bottom: 15px; }
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus { border-color: #007bff; }
+
+/* Mensagens de Feedback */
+.msg {
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+    font-weight: 500;
+}
+
+.error { color: #dc3545; }
+.success { color: #28a745; margin-bottom: 15px; }
+
+/* Botão com Efeito CSS (Cor e Tamanho) */
+.btn-submit {
+    width: 100%;
+    padding: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-submit:hover {
+    background-color: #28a745; /* Transição para verde */
+    transform: scale(1.05);     /* Aumento de tamanho */
+    box-shadow: 0 5px 15px rgba(40, 167, 69, 0.4);
+}
