@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Teste de Formulário</title>
-<style>
-body { font-family: Arial; text-align: center; margin-top: 50px; }
-input { padding: 8px; margin: 5px; }
-#mensagem { color: red; font-weight: bold; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validação de Formulário Profissional</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>Formulário de Teste</h2>
-<input type="text" id="nome" placeholder="Digite seu nome">
-<button onclick="validar()">Enviar</button>
-<p id="mensagem"></p>
-<script>
-function validar() {
-const nome = document.getElementById("nome").value;
-const msg = document.getElementById("mensagem");
-if (nome === "") {
-msg.textContent = "Erro: o nome é obrigatório!";
-} else {
-msg.style.color = "green";
-msg.textContent = "Formulário enviado com sucesso!";
-}
-}
-</script>
+
+<div class="card">
+    <h2>Cadastro</h2>
+    <div id="statusGeral" class="msg success"></div>
+
+    <form id="meuForm" novalidate>
+        <div class="form-group">
+            <input type="text" id="nome" placeholder="Seu nome">
+            <div id="erroNome" class="msg error"></div>
+        </div>
+
+        <div class="form-group">
+            <input type="email" id="email" placeholder="Seu e-mail">
+            <div id="erroEmail" class="msg error"></div>
+        </div>
+
+        <button type="submit" class="btn-submit">Enviar Cadastro</button>
+    </form>
+</div>
+
+    <script src="script.js"></script>
 </body>
 </html>
